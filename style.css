@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav{
+    @apply bg-[#cb7801] flex;
+}
+.menu {
+    @apply flex space-x-2 mx-4 my-4
+}
+.menu-item_link{
+    @apply block text-white hover:bg-indigo-500
+}
+.input {
+    @apply mt-4 mb-4 pl-20 flex
+}
