@@ -6,6 +6,7 @@ import NewPage from "./pages/tintuc";
 import HomePage from "./pages/home";
 import ProductPage from "./pages/product";
 import NotFoundPage from "./pages/NotFound";
+import AdminAddNews from "./pages/admin/news/add";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -21,6 +22,7 @@ router.on({
 
     "/admin/dashboard": () => print(Dashboard),
     "/admin/news": () => print(AdminNewPage),
+    "/admin/news/add": () => print(AdminAddNews),
     "/admin/product": () => print(Dashboard),
 
 });
