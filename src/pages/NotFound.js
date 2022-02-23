@@ -1,28 +1,25 @@
+import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
+import news from "./data";
 
-import Posts from "./data";
-
-const DetailPost = {
-    render(id) {
-        const CurrentPost = Posts.find((post) => post.id === id);
+const NotFoundPage = {
+    render() {
         return /* html */`
         <div class="max-w-5xl mx-auto">
             <header>
                 ${Header.render()}
                 ${Nav.render()}
             </header>
+            <section>
+                ${Banner.render()}
+            </section>
             <main>
-                <h1>${CurrentPost.title}<h2>
-                <img src="${CurrentPost.img}" />
-                <p>${CurrentPost.desc}</p>
+                Not Found Page
             </main>
-            <footer>
-                ${Footer.render()}
-            </footer>
         </div>
         `;
     },
 };
-export default DetailPost;
+export default NotFoundPage;
