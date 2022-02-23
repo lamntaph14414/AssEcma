@@ -18,7 +18,7 @@ const NewPage = {
                             <div class="border borde-gray-400 px-4 py-4">
                                 <a href=""> <img src="${post.img}"></a>
                                 <h3 class="my-4"><a href="" class="text-lg text-[#cb7801] no-underline font-semibold">${post.title}</a></h3>
-                                <p>Tối ngày 16/06/2018, Cao đẳng FPT Polytechnic Hà Nội đã tổ chức Lễ tôn vinh "Ong vàng Poly", tuyên dương 295 cá nhân và tập thể có thành tích xuất sắc trong học tập cũng như hoạt động</p>
+                                <p>${post.desc}</p>
                             </div>
                         `).join("")}
                     </div>

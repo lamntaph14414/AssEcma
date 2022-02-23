@@ -12,5 +12,5 @@ nav{
     @apply block text-white hover:bg-indigo-500
 }
 .input {
-    @apply mt-4 mb-4 pl-20 flex
+    @apply mt-3 mb-6 pl-20  flex
 }

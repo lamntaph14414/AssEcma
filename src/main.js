@@ -2,7 +2,7 @@ import Navigo from "navigo";
 import Dashboard from "./pages/admin/dashboard";
 import AdminNewPage from "./pages/admin/news";
 import DetailPost from "./pages/DetailPost";
-import NewPage from "./pages/gioithieu";
+import NewPage from "./pages/tintuc";
 import HomePage from "./pages/home";
 import ProductPage from "./pages/product";
 
@@ -13,8 +13,11 @@ const print = (content) => {
 };
 router.on({
     "/": () => print(HomePage),
-    "/gioithieu": () => print(NewPage),
-    "/gioithieu/:id": () => print(DetailPost),
+    "/tintuc": () => print(NewPage),
+    "/tintuc/:id": (value) => {
+        console.log(value.data.id);
+        print(DetailPost);
+    },
     "/product": () => print(ProductPage),
 
     "/admin/dashboard": () => print(Dashboard),
