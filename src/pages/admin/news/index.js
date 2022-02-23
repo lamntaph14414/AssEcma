@@ -75,7 +75,7 @@ const AdminNewPage = {
                                                             <div class="text-sm text-gray-900">${post.desc}</div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Sửa</a>
+                                                        <a href="/admin/news/${post.id}/id" class="text-indigo-600 hover:text-indigo-900">Sửa</a>
                                                         <button class="inline-block bg-indigo-500 hover:bg-indigo-800 text-white text-sm py-3 px-6 rounded mx-4">Xóa</button>
                                                         </td>
                                                     </tr>
