@@ -93,5 +93,20 @@ const AdminNewPage = {
         </div>
         `;
     },
+    afterRender() {
+        const buttons = document.querySelectorAll(".btn");
+        buttons.forEach((button) => {
+            const { id } = button.dataset;
+            button.addEventListener("click", () => {
+                const confirm = window.confirm("Bạn có chắc chắn muốn xóa không?");
+                if (confirm) {
+                    remove(id).then(() => {
+                        console.log("Bạn đã xóa thành công");
+                        reRender(AdminNewPage, "#app");
+                    });
+                }
+            });
+        });
+    },
 };
 export default AdminNewPage;

@@ -11,6 +11,7 @@ const router = new Navigo("/", { linksSelector: "a" });
 
 const print = (content, id) => {
     document.querySelector("#app").innerHTML = content.render(id);
+    if (content.afterRender) content.afterRender(id);
 };
 router.on({
     "/": () => print(HomePage),
