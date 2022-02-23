@@ -1,4 +1,5 @@
 import AdminNav from "../../../components/AdminNav";
+import data from "../../data";
 
 const AdminNewPage = {
     render() {
@@ -55,25 +56,30 @@ const AdminNewPage = {
                                             <tr>
                                                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">STT</th>
                                                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tiêu đề</th>
+                                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Mô tả</th>
                                                 <th scope="col" class="relative px-6 py-3">
                                                 <span class="sr-only">Edit</span>
                                                 </th>
                                             </tr>
                                             </thead>
                                             <tbody class="bg-white divide-y divide-gray-200">
-                                            <tr>
-                                                <td class="px-6 py-4 whitespace-nowrap">
-                                                1
-                                                </td>
-                                                <td class="px-6 py-4 whitespace-nowrap">
-                                                    <div class="text-sm text-gray-900">Tình hình diễn biến</div>
-                                                </td>
-                                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                <a href="#" class="text-indigo-600 hover:text-indigo-900">Sửa</a>
-                                                <button class="inline-block bg-indigo-500 hover:bg-indigo-800 text-white text-sm py-3 px-6 rounded mx-4">Xóa</button>
-                                                </td>
-                                            </tr>
-
+                                                ${data.map((post, index) => /* html */`
+                                                    <tr>
+                                                        <td class="px-6 py-4 whitespace-nowrap">
+                                                        ${index + 1}
+                                                        </td>
+                                                        <td class="px-6 py-4 whitespace-nowrap">
+                                                            <div class="text-sm text-gray-900">${post.title}</div>
+                                                        </td>
+                                                        <td class="px-6 py-4 whitespace-nowrap">
+                                                            <div class="text-sm text-gray-900">${post.desc}</div>
+                                                        </td>
+                                                        <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Sửa</a>
+                                                        <button class="inline-block bg-indigo-500 hover:bg-indigo-800 text-white text-sm py-3 px-6 rounded mx-4">Xóa</button>
+                                                        </td>
+                                                    </tr>
+                                                `).join("")}
                                             <!-- More people... -->
                                             </tbody>
                                         </table>
