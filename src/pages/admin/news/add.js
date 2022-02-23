@@ -1,6 +1,4 @@
 import axios from "axios";
-import $ from "jquery";
-import validate from "jquery-validation";
 import { add } from "../../../api/post";
 import AdminNav from "../../../components/AdminNav";
 

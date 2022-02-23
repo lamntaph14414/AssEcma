@@ -1,6 +1,29 @@
 {
     "posts": [
-        {}
+        {
+            "id": 1,
+            "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "img": "http://res.cloudinary.com/anh13902/image/upload/v1645436585/mfvbalnb2kv8kx5m3cjf.jpg",
+            "author": "aaaaa",
+            "desc": "",
+            "catePostId": "1"
+        },
+        {
+            "id": 2,
+            "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "img": "http://res.cloudinary.com/anh13902/image/upload/v1645436602/lguqlphh3klxnwc9z1mp.jpg",
+            "author": "Ann Anh 11",
+            "desc": "",
+            "catePostId": "1"
+        },
+        {
+            "id": 3,
+            "title": "aaaaaa",
+            "img": "http://res.cloudinary.com/anh13902/image/upload/v1645436627/u9wvm9zw6tfvpseocmko.jpg",
+            "author": "aaaaa",
+            "desc": "",
+            "catePostId": "1"
+        }
     ],
     "products": [
         {}
