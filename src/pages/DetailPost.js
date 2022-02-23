@@ -5,7 +5,7 @@ import Nav from "../components/Nav";
 import Posts from "./data";
 
 const DetailPost = {
-    render(id) {
+    async render(id) {
         const CurrentPost = Posts.find((post) => post.id === id);
         return /* html */`
         <div class="max-w-5xl mx-auto">
