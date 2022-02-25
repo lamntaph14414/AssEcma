@@ -5,6 +5,7 @@ import DetailPost from "./pages/DetailPost";
 import NewPage from "./pages/tintuc";
 import HomePage from "./pages/home";
 import ProductPage from "./pages/product";
+import DetailProduct from "./pages/DetailProduct";
 import NotFoundPage from "./pages/NotFound";
 import AdminAddNews from "./pages/admin/news/add";
 import Signup from "./pages/signup";
@@ -16,26 +17,12 @@ const print = async (content, id) => {
     if (content.afterRender) content.afterRender(id);
 };
 
-router.on("/admin/*", () => {}, {
-    before(done, match) {
-        // do something
-        if (localStorage.getItem("user")) {
-            const userId = JSON.parse(localStorage.getItem("user")).id;
-            if (userId === 1) {
-                done();
-            } else {
-                document.location.href = "/";
-            }
-        } else {
-            document.location.href = "/";
-        }
-    },
-});
 router.on({
     "/": () => print(HomePage),
     "/tintuc": () => print(NewPage),
     "/tintuc/:id": ({ data: { id } }) => print(DetailPost, id),
     "/product": () => print(ProductPage),
+    "/product/:id": ({ data: { id } }) => print(DetailProduct, id),
 
     "/admin/dashboard": () => print(Dashboard),
     "/admin/news": () => print(AdminNewPage),
